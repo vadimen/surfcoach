@@ -427,6 +427,20 @@ p:last-child {
   margin-top: 3rem;
 }
 
+@media (min-width: 60rem) {
+  #coaching .wrap {
+    max-width: 74rem;
+  }
+
+  .gallery {
+    gap: 1.5rem;
+  }
+
+  .gallery img {
+    aspect-ratio: 4 / 3;
+  }
+}
+
 .gallery figure {
   margin: 0;
   overflow: hidden;
@@ -589,9 +603,9 @@ p:last-child {
 }
 
 .club-photo {
-  margin: 0 0 2.5rem;
+  margin: 0 0 1.25rem;
   overflow: hidden;
-  border-radius: 14px;
+  border-radius: 10px;
   box-shadow: var(--shadow-sm);
 }
 
