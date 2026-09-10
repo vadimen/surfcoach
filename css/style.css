@@ -991,6 +991,93 @@ blockquote.review footer span {
   }
 }
 
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    background: #fff;
+    font-size: 10.5pt;
+  }
+
+  .site-header,
+  .nav-toggle,
+  .form-embed,
+  .hero-actions,
+  .btn {
+    display: none !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .hero {
+    min-height: 0;
+    padding: 3.5rem 0 2rem;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .hero::after {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .section {
+    padding: 1.35rem 0;
+    scroll-margin-top: 0;
+  }
+
+  .gallery {
+    margin-top: 1.25rem;
+    gap: 0.6rem;
+  }
+
+  .gallery img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .club-grid,
+  .reviews {
+    grid-template-columns: 1fr;
+  }
+
+  .section-alt {
+    border: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .card,
+  .contact-grid a {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+
+  .section h2 {
+    break-after: avoid;
+  }
+
+  .form-embed,
+  #leave-review {
+    display: none !important;
+  }
+
+  .site-footer {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
